@@ -1,0 +1,232 @@
+/* ตั้งค่าพื้นหลังแบบ Gradient Animation */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, #4facfe, #00f2fe); /* ไล่สีพื้นหลัง */
+    background-size: 200% 200%; /* ปรับขนาดการไล่สี */
+    animation: gradient-animation 5s ease infinite; /* ใส่แอนิเมชัน */
+}
+
+/* กำหนดการเคลื่อนไหวของแอนิเมชัน */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* ปรับแต่งกล่อง Login */
+.login-container {
+    width: 350px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* เพิ่มเอฟเฟกต์ตอนชี้เมาส์ */
+.login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ปรับปุ่ม Login */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* เปลี่ยนสีปุ่มเมื่อชี้เมาส์ */
+button:hover {
+    background: #0056b3;
+}
+/* เพิ่มไอคอนหรือหัวข้อ */
+.login-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    animation: rotate-title 2s linear infinite;
+}
+
+/* แอนิเมชันหมุน */
+@keyframes rotate-title {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+/* ปรับสไตล์ Input */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* เพิ่มเอฟเฟกต์ตอนคลิก */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+button {
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+.login-container {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: white;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
+  transform: rotate(45deg);
+  animation: gradientAnimation 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  50% {
+    transform: translate(-30%, -30%) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+.login-container {
+  position: relative;
+  background: linear-gradient(to bottom right, #ffffff, #e6f7ff);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: glowEffect 3s infinite; /* เพิ่ม Animation */
+  overflow: hidden;
+}
+
+@keyframes glowEffect {
+  0% {
+    box-shadow: -10px -10px 15px 10px rgba(135, 206, 250, 0.5);
+  }
+  50% {
+    box-shadow: -30px -30px 25px 30px rgba(135, 206, 250, 0.3);
+  }
+  100% {
+    box-shadow: -10px -10px 15px 10px rgba(135, 206, 250, 0.5);
+  }
+}
+.login-container {
+    position: relative;
+    background: linear-gradient(to bottom right, #ffffff, #e6f7ff);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: glowEffect 3s infinite; /* เพิ่ม Animation */
+    overflow: hidden;
+  }
+  
+  @keyframes glowEffect {
+    0% {
+      box-shadow: -10px -10px 15px 10px rgba(135, 206, 250, 0.5);
+    }
+    50% {
+      box-shadow: -30px -30px 25px 30px rgba(135, 206, 250, 0.3);
+    }
+    100% {
+      box-shadow: -10px -10px 15px 10px rgba(135, 206, 250, 0.5);
+    }
+  }
+   
